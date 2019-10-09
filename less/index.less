@@ -19,7 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -43,17 +42,69 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 
 /* Set every element's box-sizing to border-box */
+@p-font: 'Mansalva', cursive;
+@heading-font: 'Oswald', sans-serif;
+@a-font: 'Big Shoulders Display', cursive;
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
+	// border: 1px solid red;
+}
+body {
+	line-height: 2;
+}
+section {
+	padding: 4% 0;
 }
 
-html, body {
-    height: 100%;
+table tr{
+	border: 1px dashed black;
+}
+nav {
+	display: flex;
+	justify-content: space-evenly;
+	font-family: @a-font;
+}
+h1, h2, h3, h4 {
+	font-family: @heading-font;
+	font-size: 1.5rem;
+}
+p, li {
+	font-family: @p-font;
+	font-size: 1.2rem
+}
+img {
+	height: 15vh;
+}
+.top-container {
+	display: flex;
+}
+.top {
+	background-color: grey;
+	width: 90%;
+	margin: 0 auto;
+	padding: 20px;
+	}
+.middle{
+	display: flex;
+	div {
+		width: 44%;
+		padding: 10px;
+		margin: 5%;
+	}
+}
+table {
+	width: 70%;
+	border: 1px solid grey;
+	margin: 0 auto;
+	background-color: lightblue;
+	th {
+		border-bottom: 1px dashed grey;
+	}
+	td {
+		border-bottom: 1px dashed grey;;
+	}
 }
 
